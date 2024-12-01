@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/android-manifest-viewer/',
+  base: '/axml_viewer/',
   build: {
     outDir: 'dist'
   }
