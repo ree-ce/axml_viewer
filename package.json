@@ -1,0 +1,14 @@
+{
+  "name": "android-manifest-viewer",
+  "version": "1.0.0",
+  "description": "Android Manifest Viewer",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "axml2xml": "^1.0.1",
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
