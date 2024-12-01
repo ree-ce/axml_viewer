@@ -30,7 +30,7 @@ function downloadXML() {
 
 async function handleFile(file) {
     try {
-        filename.textContent = `選擇的檔案: ${file.name}`;
+        filename.textContent = `Selected File: ${file.name}`;
         showLoading(true);
 
         const buffer = await new Promise((resolve, reject) => {
@@ -51,7 +51,7 @@ async function handleFile(file) {
         copyBtn.style.display = 'block';
 
     } catch (error) {
-        output.innerHTML = `<div class="error">錯誤：${error.message}</div>`;
+        output.innerHTML = `<div class="error">Error：${error.message}</div>`;
         downloadBtn.disabled = true;
         copyBtn.style.display = 'none';
     } finally {
@@ -67,7 +67,7 @@ copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(currentXmlContent)
         .then(() => {
             const originalText = copyBtn.textContent;
-            copyBtn.textContent = '已複製！';
+            copyBtn.textContent = 'Copied！';
             setTimeout(() => {
                 copyBtn.textContent = originalText;
             }, 2000);
