@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Manifest 檢視器</title>
+    <!-- highlight.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <!-- sprintf-js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.2/sprintf.min.js"></script>
+    <!-- 自定義樣式 -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Android Manifest 檢視器</h1>
+            <p>上傳 AndroidManifest.xml 檔案來查看其內容</p>
+        </div>
+
+        <div class="upload-area" id="dropZone">
+            <p>拖放檔案到這裡或點擊選擇檔案</p>
+            <input type="file" id="fileInput" style="display: none" accept=".xml">
+            <div class="filename" id="filename"></div>
+        </div>
+
+        <div class="button-group">
+            <button id="downloadBtn" class="button" disabled>下載轉換後的檔案</button>
+        </div>
+
+        <div class="output-container">
+            <pre id="output" class="output language-markup"></pre>
+            <button id="copyBtn" class="copy-button">複製內容</button>
+            <div id="loading" class="loading">處理中...</div>
+        </div>
+    </div>
+
+    <!-- 使用 type="module" 來支援 ES6 模組 -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

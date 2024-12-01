@@ -1,14 +1,38 @@
 {
-  "name": "android-manifest-viewer",
+  "name": "axml_viewer",
   "version": "1.0.0",
   "description": "Android Manifest Viewer",
-  "main": "server/server.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "start": "node server/server.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ree-ce/axml_viewer.git"
+  },
+  "keywords": [
+    "android",
+    "manifest",
+    "xml",
+    "viewer"
+  ],
+  "author": "Ree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ree-ce/axml_viewer/issues"
+  },
+  "homepage": "https://ree-ce.github.io/axml_viewer",
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "vite": "^5.0.12"
   },
   "dependencies": {
-    "axml2xml": "^1.0.1",
-    "express": "^4.21.1",
-    "multer": "^1.4.5-lts.1"
+    "highlight.js": "^11.9.0",
+    "sprintf-js": "^1.1.3"
   }
 }

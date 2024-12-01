@@ -1,4 +1,8 @@
+import { defineConfig } from 'vite';
 
-export default {
-    base: '/android-manifest-viewer/', // 改成您的 repo 名稱
+export default defineConfig({
+  base: '/android-manifest-viewer/',
+  build: {
+    outDir: 'dist'
   }
+});
